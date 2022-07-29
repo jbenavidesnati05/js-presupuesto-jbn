@@ -22,25 +22,41 @@
           </select>
           <input id="descripcion" type="text" placeholder="Descripcion" />
           <input id="valor" type="text" id="valor" placeholder="Valor" />
-          <button>Agregar</button>
+          <button onclick="agregarDato()">Agregar</button>
         </form>
     </div>
     <div class="presupuesto contenedor" >
-        <h3>Presupuesto</h3>
-        <input type="text" id="presupuestoTotal">
-        <h3>Ingresos</h3>
-        <input type="text" id="ingresosTotales">
-        <h3>gastos</h3>
-        <input type="text" id="gastosTotales">
-
-    </div>
+        <h3>Presupuesto Total</h3>
+        <p type="text" id="presupuesto"></p>
+        <h4>Ingresos Totales</h4>
+        <p type="text" id="ingresosTotales"></p> 
+        <h4>Gastos Totales</h4>
+        <p type="text" id="gastosTotales"></p> 
+    </div>  
+    </p>
+    <!-- INGRESOS  -->
     <div class="valores contenedor">
       <div class="ingresos">
         <h4>Ingresos</h4>
+        <div id="listado-ingresos">
+          <div class="contenedor">
+            <li class="descripcion">Descripcion</li>
+            <li class="valor">Precio</li>
+          </div>
+        </div>
+        <div class="sub" id="total-ingresos-sub">hps</div>
       </div>
-      <div class="egresos">
+    <!-- GASTOS  -->
+      <div class="gastos">
         <h4>Egresos</h4>
+        <div id="listado-gastos">
+          <div class="contenedor">
+            <li class="descripcion">Descripcion</li>
+            <li class="valor">Precio</li>
+          </div>
+        </div>
       </div>
+      <div class="sub" id="total-gastos-sub">hps</div>
     </div>
 
     <script src="main.js"></script>

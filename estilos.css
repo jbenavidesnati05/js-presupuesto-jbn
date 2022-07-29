@@ -1,62 +1,112 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html{
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
+  background: #a8c0ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #3f2b96,
+    #a8c0ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #3f2b96,
+    #a8c0ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-body{
-    font-family: 'playfair Display',serif;
-    font-size: 1.6rem;
-    line-height: 2;
+body {
+  font-family: "playfair Display", serif;
+  font-size: 1.6rem;
+  line-height: 2;
 }
-header{
-    padding-right: 5rem ;
-    text-align: center;
-    /* background-color: bisque;  */
+header {
+  padding-right: 5rem;
+  text-align: center;
+  /* background-color: bisque;  */
 }
-h4{
-    text-align: center;
+h4 {
+  text-align: center;
 }
-.contenedor{
-    width: 80%;
-    margin: auto;
-    /* background-color: aqua; */
-    margin-top: 2rem;
+.contenedor {
+  width: 80%;
+  margin: auto;
+  /* background-color: aqua; */
+  margin-top: 2rem;
 }
-.links{
-    display: flex;
-    justify-content: space-around;
+.links {
+  display: flex;
+  justify-content: space-around;
 }
-a{
-    background-color: blue;
-    color: white;
-    border-radius:10px;
-    padding: 0.5rem 1rem;
-    margin-top:2rem ;
-    text-decoration: none;
-}
-
-
-.forma{
-    background-color: rgb(27, 27, 105);
-    width: 80%;
-    margin: auto;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 3px 3px 4px  ;
-    color: white;
-    display: inline;
-    justify-content: space-around;
-   
+a {
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  margin-top: 2rem;
+  text-decoration: none;
 }
 
-.valores{
-border: 1px solid black;
+.forma {
+  background-color: rgb(27, 27, 105);
+  width: 30%;
+  font-size: 3rem;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 4px;
+  color: white;
+  display: block;
+  justify-content: space-around;
+}
+.presupuesto {
+  width: 30%;  
+  border: 1px solid black;
+  text-align: center;
+  font-size: 2rem;
 }
 
-.ingresos{
+.valores {
+  /* border: 1px solid black; */
+  font-size: 2rem;
+}
+
+.ingresos {
+  float: left;
+  width: 50%;
+  /* border: 1px solid black; */
+}
+
+.ingresos .contenedor .descripcion{
+  /* border: 1px solid black; */
+  max-width: 60%;
+  float: left;
+}
+
+.gastos .contenedor .descripcion{
+    /* border: 1px solid black; */
+    max-width: 60%;
     float: left;
-    width: 50%;
-}
+  }
+  
+  .ingresos .contenedor .valor{
+    /* border: 1px solid black; */
+    max-width: 60%;
+    float: right;
+  }
+  
+  .gastos .contenedor .valor{
+      /* border: 1px solid black; */
+      max-width: 60%;
+      float: right;
+    }
+  .sub{
+    font-size: 2rem;
+  }
+
+
+
+
+    
