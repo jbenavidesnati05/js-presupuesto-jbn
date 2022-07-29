@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Presupuesto</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+
+  <body onload="cargarApp()">
+    <header>
+      <h1>Presupuesto JBN</h1>
+    </header>
+    <div class="contenedor">
+        <form id="forma" class="forma">
+          <label>Seleccionar ingreso o gasto</label>
+          <select name="" id="tipo">
+            <option value=""></option>
+            <option value="ingreso">Ingreso</option>
+            <option value="gasto">Gasto</option>
+          </select>
+          <input id="descripcion" type="text" placeholder="Descripcion" />
+          <input id="valor" type="text" id="valor" placeholder="Valor" />
+          <button>Agregar</button>
+        </form>
+    </div>
+    <div class="presupuesto contenedor" >
+        <h3>Presupuesto</h3>
+        <input type="text" id="presupuestoTotal">
+        <h3>Ingresos</h3>
+        <input type="text" id="ingresosTotales">
+        <h3>gastos</h3>
+        <input type="text" id="gastosTotales">
+
+    </div>
+    <div class="valores contenedor">
+      <div class="ingresos">
+        <h4>Ingresos</h4>
+      </div>
+      <div class="egresos">
+        <h4>Egresos</h4>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
