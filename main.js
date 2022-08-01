@@ -17,6 +17,8 @@ class Dato{
         this._valor = valor;
     }
 }
+
+
 // ____________INGRESOS____________________ 
 // clase hija
 class Ingreso extends Dato{
@@ -26,8 +28,8 @@ class Ingreso extends Dato{
 }
 // arreglo ingresos 
 const ingresos =[
-    new Ingreso("sueldo",19000),
-    new Ingreso("ventas",4000)
+    // new Ingreso("sueldo",9000),
+    // new Ingreso("ventas",4000)
     
 ];
 // sumar ingresos 
@@ -67,8 +69,8 @@ class Gasto extends Dato{
 }
 // arreglo gastos 
 const gastos =[
-    new Gasto("arrendo",1000),
-    new Gasto("ropa",1000)
+    // new Gasto("arrendo",1000),
+    // new Gasto("ropa",1000)
 ];
 // sumar gastos 
 let totalGastos=()=>{
@@ -101,9 +103,14 @@ let totalGastos=()=>{
  }
 // _________________________________________________________________________________________________________
 
+// Carga las funciones PRESUPUESTO TOTAL - INGRESOS TOTALES - GASTOS TOTALES 
+let cargarApp=()=>{
+    cargarTotalPresupuestos();
+    cargarIngresos();
+    cargarGastos();
+}
 
 
-// ____________CARGAR  EN PAGINA____________________ 
 
 // Envia los valores de PRESUPUESTO TOTAL - INGRESOS TOTALES - GASTOS TOTALES 
 let cargarTotalPresupuestos =()=>{
@@ -111,37 +118,29 @@ let cargarTotalPresupuestos =()=>{
     document.getElementById("presupuesto").innerHTML = presupuesto; 
     let ingresos = totalIngresos()
     document.getElementById("ingresosTotales").innerHTML= ingresos;
-    document.getElementById("total-ingresos-sub").innerHTML= `SUBTOTAL INGRESOS ===> $${ingresos}`;
-    
     let gastos = totalGastos()
     document.getElementById("gastosTotales").innerHTML = gastos;
-    document.getElementById("total-gastos-sub").innerHTML= `SUBTOTAL GASTOS ===> $${gastos}`;
 }
 
-let agregarDato=()=>{
-    let tipo = document.getElementById("tipo").value;
-    let descripcion = document.getElementById("descripcion").value;
-    let valor = document.getElementById("valor").value;
-    
-    console.log(tipo);
-    console.log(descripcion);
-    console.log(valor);
 
-    if(descripcion.value !== " " && valor.value !== " "){
-        if(tipo.value === "Ingreso"){
-            ingresos.push(new Ingreso(descripcion.value,valor.value))
+let agregarDato=()=>{
+    let forma = document.forms["forma"];
+    let tipo = forma["tipo"];
+    let descripcion = forma["descripcion"];
+    let valor = forma["valor"];
+    
+
+
+    if(descripcion.value !== " " && valor.value !==" "  ){
+        if(tipo.value === "ingreso"){
+            ingresos.push(new Ingreso(descripcion.value,+valor.value))
             cargarTotalPresupuestos();
             cargarIngresos()
-            }else if(tipo.value==="Gasto"){
-            gastos.push(new Gasto(descripcion.valor, valor.value))
+            }
+            else if(tipo.value === "gasto"){
+            gastos.push(new Gasto(descripcion.value, +valor.value))
             cargarTotalPresupuestos();
             cargarGastos();
             }
     }
-}
-// Carga las funciones PRESUPUESTO TOTAL - INGRESOS TOTALES - GASTOS TOTALES 
-let cargarApp=()=>{
-    cargarTotalPresupuestos();
-    cargarIngresos();
-    cargarGastos();
 }

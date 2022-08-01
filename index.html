@@ -12,16 +12,15 @@
     <header>
       <h1>Presupuesto JBN</h1>
     </header>
-    <div class="contenedor">
-        <form id="forma" class="forma">
+    <div class="contenedor" >
+        <form id="forma" class="forma" onsubmit="return false;">
           <label>Seleccionar ingreso o gasto</label>
           <select name="" id="tipo">
-            <option value=""></option>
-            <option value="ingreso">Ingreso</option>
-            <option value="gasto">Gasto</option>
+            <option value="ingreso">ingreso</option>
+            <option value="gasto">gasto</option>
           </select>
           <input id="descripcion" type="text" placeholder="Descripcion" />
-          <input id="valor" type="text" id="valor" placeholder="Valor" />
+          <input id="valor" type="text" placeholder="Valor" />
           <button onclick="agregarDato()">Agregar</button>
         </form>
     </div>
@@ -44,7 +43,7 @@
             <li class="valor">Precio</li>
           </div>
         </div>
-        <div class="sub" id="total-ingresos-sub">hps</div>
+        <div class="sub" id="total-ingresos-sub"></div>
       </div>
     <!-- GASTOS  -->
       <div class="gastos">
@@ -56,7 +55,6 @@
           </div>
         </div>
       </div>
-      <div class="sub" id="total-gastos-sub">hps</div>
     </div>
 
     <script src="main.js"></script>
